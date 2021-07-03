@@ -1,0 +1,239 @@
+.news-wrapper {
+    &__article {
+        width: 100%;
+        padding-top: 140px;
+        padding-bottom: 144px;
+        @include flex-builder(column, none, center);
+        position: relative;
+        background: url(../img/news/bg.png) bottom no-repeat,
+        linear-gradient(57.1deg, #3B7FD3 10.72%, #23CBF9 89.28%);
+
+        @include media-xs {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+    }
+
+    &__white-line {
+        margin-bottom: 28px;
+    }
+
+    &__title-small {
+        margin-bottom: 100px;
+
+        @include media-xs {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__news-slider-and-buttons-block {
+        width: 100%;
+        @include flex-center-center;
+    }
+}
+
+.white-line {
+    width: 153px;
+    height: 1px;
+    background: $white;
+}
+
+.title-small_white {
+    color: $white;
+}
+
+.zoom-icon {
+    width: 80px;
+    height: 80px;
+    border: 2px solid $black;
+    border-radius: 50%;
+    @include flex-center-center;
+    transition: all 0.2s ease-in-out;
+
+    &__plus {
+        width: 23px;
+        height: 2px;
+        background: $black;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 23px;
+            background: $black;
+            position: absolute;
+            top: -11.5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.title-small_link {
+    font-size: 22px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.news-slider-container {
+    width: 1170px;
+    overflow: hidden;
+
+    @include media-l {
+        width: 780px;
+    }
+
+    @include media-m {
+        width: 370px;
+    }
+
+    @include media-xs {
+        width: 80%;
+    }
+}
+
+.news-slider-slide {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__zoom-icon {
+        position: absolute;
+        top: 80px;
+        left: 145px;
+        opacity: 0;
+        pointer-events: none;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__title-small {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    &__text {
+        margin-bottom: 32px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    &__avatar-block {
+        width: 100%;
+        padding: 0 20px;
+        @include flex-builder(row, none, center);
+        margin-bottom: 20px;
+    }
+
+    &__avatar-text-block {
+        margin-left: 20px;
+    }
+
+    &__avatar-name {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: $black;
+        margin-bottom: 8px;
+    }
+
+    &__avatar-date {
+        font-size: 14px;
+        color: $blue;
+    }
+}
+
+.news-slider-slide__img:hover + .news-slider-slide__zoom-icon {
+    opacity: 1;
+}
+
+.button-control {
+    width: 40px;
+    height: 40px;
+    border: 2px solid $white;
+    border-radius: 50%;
+    @include flex-center-center;
+    color: $white;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &_next {
+        margin-left: 4.16%;
+
+        @include media-m {
+            margin-left: 12.7%;
+        }
+
+        @include media-s {
+            margin-left: 8%;
+        }
+    }
+
+    &_prev {
+        margin-right: 4.16%;
+
+        @include media-m {
+            margin-right: 12.7%;
+        }
+
+        @include media-s {
+            margin-right: 8%;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        color: $white-active;
+        border-color: $white-active;
+    }
+
+    @include media-xs {
+        display: none;
+    }
+}
+
+.news-slider-pagination {
+    width: 218px;
+    @include flex-builder(row, space-between, none);
+    margin-top: 60px;
+}
+
+.news-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000000;
+    @include flex-center-center;
+    transition: all 0.2s ease-in-out;
+
+    &__img {
+        width: 700px;
+
+        @include media-s {
+            width: 90%;
+        }
+    }
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}

@@ -1,0 +1,30 @@
+// libs 
+
+@import "libs/mixins";
+@import "libs/colors";
+@import "libs/fonts";
+@import "libs/normalize";
+
+// properties for all elements
+
+.icon-arrow_down:before, .icon-arrow_left:before, .icon-arrow_right:before, .icon-box:before, .icon-clock:before, .icon-facebook:before, .icon-inst:before, .icon-marker:before, .icon-phone:before, .icon-twitter:before {
+    font-family: "icon-font";
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gotham", sans-serif;
+    scroll-behavior: smooth;
+}
+
+// blocks
+
+@import "blocks/nav";
+@import "blocks/header";
+@import "blocks/what-we-do";
+@import "blocks/news";
+@import "blocks/gallery";
+@import "blocks/map-and-form";
+@import "blocks/footer";

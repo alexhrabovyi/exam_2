@@ -1,0 +1,42 @@
+.footer-wrapper {
+    @include flex-center;
+    background: linear-gradient(63.43deg, rgba(85, 183, 255, 0.9) 14.81%, rgba(125, 89, 255, 0.9) 81.48%),
+        url(../img/footer/bg.png) center center no-repeat;
+        background-size: cover;
+
+    &__footer {
+        width: 770px;
+        height: 520px;
+        @include flex-builder(column, center, none);
+
+        @include media-m {
+            width: 100%;
+            height: 300px;
+            padding: 0 10%;
+        }
+    }
+
+    &__logo-and-links-block {
+        width: 100%;
+        @include flex-builder(row, space-between, center);
+        
+        @include media-xs {
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        @include media-xs {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__text {
+        margin-top: 40px;
+        color: $white;
+
+        @include media-xs {
+            text-align: center;
+        }
+    }
+}

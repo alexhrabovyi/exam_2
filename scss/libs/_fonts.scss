@@ -1,0 +1,80 @@
+// google fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
+// local fonts
+
+@font-face {
+    font-family: "Gotham", sans-serif;
+    src: url('../fonts/Gotham-Bold.ttf');
+    src: url('../fonts/Gotham-Book.ttf');
+}
+
+// icon font
+
+@font-face {
+    font-family: 'icon-font';
+    src:  url('../fonts/icon-font/icon-font.eot?5dz8rn');
+    src:  url('../fonts/icon-font/icon-font.eot?5dz8rn#iefix') format('embedded-opentype'),
+      url('../fonts/icon-font/icon-font.ttf?5dz8rn') format('truetype'),
+      url('../fonts/icon-font/icon-font.woff?5dz8rn') format('woff'),
+      url('../fonts/icon-font/icon-font.svg?5dz8rn#icon-font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+  
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icon-font' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+.icon-arrow_down:before {
+    content: "\e900";
+}
+
+.icon-arrow_left:before {
+    content: "\e901";
+}
+
+.icon-arrow_right:before {
+    content: "\e902";
+}
+
+.icon-box:before {
+    content: "\e903";
+}
+
+.icon-clock:before {
+    content: "\e904";
+}
+
+.icon-facebook:before {
+    content: "\e905";
+}
+
+.icon-inst:before {
+    content: "\e906";
+}
+
+.icon-marker:before {
+    content: "\e907";
+}
+
+.icon-phone:before {
+    content: "\e908";
+}
+
+.icon-twitter:before {
+    content: "\e909";
+}
