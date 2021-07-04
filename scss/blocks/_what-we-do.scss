@@ -1,0 +1,237 @@
+.what-we-do-wrapper {
+
+    &__main {
+        width: 100%;
+        @include flex-builder(column, none, center);
+        padding: 100px 0;
+
+        @include media-m {
+            padding: 70px 0;
+        }
+    }
+
+    &__black-line {
+        margin-bottom: 28px;
+    }
+
+    &__title-small {
+        margin-bottom: 100px;
+
+        @include media-m {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+    }
+
+    &__product-examples-block_top {
+        margin-bottom: 140px;
+
+        @include media-m {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+.black-line {
+    width: 153px;
+    height: 1px;
+    background: $black;
+    display: block;
+}
+
+.title-small {
+    font-weight: 700;
+    font-size: 44px;
+    text-transform: uppercase;
+    color: $black;
+
+    @include media-xs {
+        font-size: 36px;
+    }
+}
+
+.square {
+    width: 585px;
+    height: 470px;
+}
+
+.square_blue {
+    background: $blue;
+}
+
+.square_purple {
+    background: $purple;
+}
+
+.subtitle-black {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: $black;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 30px;
+    color: $black;
+}
+
+.button {
+    width: 190px;
+    height: 50px;
+    border: 1px solid $black;
+    background: transparent;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $black;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+
+    &:hover {
+        color: $white;
+        background: $black;
+    }
+}
+
+.cursive-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: $dark-black;
+    line-height: 24px;
+}
+
+.product-examples-block {
+    width: 100%;
+    padding-top: 70px;
+    @include flex-builder(row, space-between, none);
+    position: relative;
+
+    @include media-m {
+        @include flex-builder(column, none, none);
+    }
+
+    @include media-xs {
+        padding-top: 30px;
+    }
+
+    &__img {
+        width: 630px;
+
+        @include media-l {
+            width: 530px;
+        }
+
+        @include media-s {
+            width: 100%;
+        }
+
+        &_marginright {
+            margin-right: 30px;
+
+            @include media-m {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+
+        &_marginleft {
+            margin-left: 30px;
+
+            @include media-m {
+                margin-left: 0;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__text-block {
+        width: 500px;
+        @include flex-builder(column, center, none);
+
+        @include media-m {
+            align-self: flex-end;
+            order: 1;
+        }
+
+        @include media-s {
+            width: 100%;
+            align-items: center;
+        }
+    }
+
+    &__square_blue {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        @include media-l {
+            width: 485px;
+            height: 410px;
+        }
+
+        @include media-s {
+            width: 80%;
+        }
+
+        @include media-xs {
+            width: 70%;
+            height: 200px;
+        }
+    }
+
+    &__square_purple {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+
+        @include media-l {
+            width: 485px;
+            height: 410px;
+        }
+
+        @include media-m {
+            left: 0;
+        }
+        
+        @include media-s {
+            width: 80%;
+        }
+
+        @include media-xs {
+            width: 70%;
+            height: 200px;
+        }
+    }
+
+    &__subtitle-black {
+        margin-bottom: 4px;
+    }
+
+    &__title-small {
+        margin-bottom: 16px;
+        
+        @include media-s {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        margin-bottom: 32px;
+
+        @include media-s {
+            text-align: center;
+            font-size: 20px;
+        }
+    }
+
+    &__button {
+        margin-bottom: 44px;
+    }
+
+    &__cursive-text {
+        @include media-s {
+            text-align: center;
+        }
+    }
+}
